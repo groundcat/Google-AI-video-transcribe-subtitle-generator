@@ -3,5 +3,5 @@ credentials.json
 workspace.code-workspace
 *.wav
 *.json
-*.srt
-*.txt
+*subtitles.srt
+*subtitles.txt
