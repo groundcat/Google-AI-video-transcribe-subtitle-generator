@@ -112,7 +112,7 @@ def break_sentences(max_chars, subs, alternative):
     for w in alternative.words:
         if firstword:
             # first word in sentence, record start time
-            start = w.start_time.ToTimedelta()
+            start = w.start_time
 
         charcount += len(w.word)
         content += " " + w.word.strip()
@@ -124,7 +124,7 @@ def break_sentences(max_chars, subs, alternative):
             # also break if , and not first word
             subs.append(srt.Subtitle(index=idx,
                                      start=start,
-                                     end=w.end_time.ToTimedelta(),
+                                     end=w.end_time,
                                      content=srt.make_legal_content(content)))
             firstword = True
             idx += 1
